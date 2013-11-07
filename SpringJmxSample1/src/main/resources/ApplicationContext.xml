@@ -1,0 +1,21 @@
+<beans>
+  <bean id="mbeanServer" class="org.springframework.jmx.support.MBeanServerFactoryBean"/>
+  <!--
+    this bean needs to be eagerly pre-instantiated in order for the exporting to occur;
+    this means that it must not be marked as lazily initialized
+  -->
+  <bean id="exporter" class="org.springframework.jmx.export.MBeanExporter">
+    <property name="beans">
+      <map>
+        <entry key="bean:name=testBean1" value-ref="testBean"/>
+      </map>
+    </property>
+    <property name="server" ref="mbeanServer"/>
+  </bean>
+
+  <bean id="testBean" class="com.`bp.samples.spring.jmx.sample1.JMXTestBean">
+    <property name="name" value="TEST"/>
+    <property name="age" value="100"/>
+  </bean>
+
+</beans>

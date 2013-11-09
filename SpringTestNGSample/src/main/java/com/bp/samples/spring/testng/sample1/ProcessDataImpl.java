@@ -24,6 +24,6 @@ public class ProcessDataImpl implements ProcessData {
     //      ETRIES, PROCESSING_STATUS, TIME_PROCESSED from bre.incoming_risk_events"
 	@SuppressWarnings("unchecked")
 	public List<Map<String,Object>> getList(String sql) {
-		return (List<Map<String, Object>>) jdbcTemplate.queryForMap(sql);
+		return (List<Map<String, Object>>) jdbcTemplate.queryForList(sql);
 	}
 }

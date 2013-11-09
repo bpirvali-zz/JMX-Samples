@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 public class ProcessDataImpl implements ProcessData {
+	@SuppressWarnings("unused")
 	private static Logger logger = LoggerFactory.getLogger(ProcessDataImpl.class);
 	private JdbcTemplate jdbcTemplate;
 	

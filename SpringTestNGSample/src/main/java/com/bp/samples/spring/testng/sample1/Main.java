@@ -24,7 +24,7 @@ public class Main {
 		logger.info("Huuuuraaaa!");
 	}
 	
-	private static void printList(List<Map<String, Object>> l, String title) {
+	public static void printList(List<Map<String, Object>> l, String title) {
 		StringBuilder sb = new StringBuilder();
 		logger.info("----------------------------------------------");
 		logger.info("-- {}", title);
